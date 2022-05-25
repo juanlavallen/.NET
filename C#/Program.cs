@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/***** Variables and Data Types *****/
+
+// Defining variables of type string
+string country = "Argentina";
+string region  = "LATAM";
+Console.WriteLine("Region: " + region + " - " + "Country: " + country);
