@@ -9,3 +9,7 @@ Console.WriteLine("Region: " + region + " - " + "Country: " + country);
 int quantity = 10;
 int price    = 20;
 Console.WriteLine("Quantity: " + quantity + " - " + "Price: " + price);
+
+// Defining a variable of type float
+float population = 45897978f;
+Console.WriteLine("Population: " + population);
