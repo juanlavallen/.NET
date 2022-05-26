@@ -46,3 +46,10 @@ switch (key) {
         Console.WriteLine("Key not found");
         break;
 }
+
+/***** Arrays *****/
+
+// Defining a array of type int
+int[] arrayInt1 = new int[5];
+int[] arrayInt2 = new int[] { 10, 20, 30, 40, 50 }; // Array Initialization
+int[] arrayInt3 = { 10, 20, 30, 40, 50 }; // Implicitly typed array
