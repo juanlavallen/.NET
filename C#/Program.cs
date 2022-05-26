@@ -19,4 +19,13 @@ bool activated = true;
 Console.WriteLine($"Activated: {activated}");
 
 /***** Conditionals *****/
-// TODO: Conditionals here
+
+int age = 19;
+
+if(age > 18 && age != 18) {
+    Console.WriteLine("Access allowed");
+} else if (age == 18) {
+    Console.WriteLine("Access allowed with identification");
+} else {
+    Console.WriteLine("Access not allowed");
+}
