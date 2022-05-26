@@ -29,3 +29,20 @@ if(age > 18 && age != 18) {
 } else {
     Console.WriteLine("Access not allowed");
 }
+
+int key = 2;
+
+switch (key) {
+    case 1:
+        Console.WriteLine("Incorrect key");
+        break;
+    case 2:
+        Console.WriteLine("Correct key");
+        break;
+    case 3:
+        Console.WriteLine("Incorrect key");
+        break;
+    default: 
+        Console.WriteLine("Key not found");
+        break;
+}
