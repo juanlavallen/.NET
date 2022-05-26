@@ -53,3 +53,8 @@ switch (key) {
 int[] arrayInt1 = new int[5];
 int[] arrayInt2 = new int[] { 10, 20, 30, 40, 50 }; // Array Initialization
 int[] arrayInt3 = { 10, 20, 30, 40, 50 }; // Implicitly typed array
+
+// Defining a array of type string
+string[] arrayString1 = new string[10];
+string[] arrayString2 = new string[] { "Mike Tyson", "Lionel Messi", "Eminem" }; // Array Initialization
+string[] arrayString3 = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }; // Implicitly typed array
