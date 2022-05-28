@@ -64,3 +64,4 @@ List<int> collectionTypeInt1 = new List<int>();
 List<int> collectionTypeInt2 = new List<int>() { 10, 20, 30, 40 };
 
 collectionTypeInt1.Add(50); // Adding an element to the list
+collectionTypeInt2.Remove(10); // Removing an element from a list
