@@ -58,3 +58,7 @@ int[] arrayInt3 = { 10, 20, 30, 40, 50 }; // Implicitly typed array
 string[] arrayString1 = new string[10];
 string[] arrayString2 = new string[] { "Mike Tyson", "Lionel Messi", "Eminem" }; // Array Initialization
 string[] arrayString3 = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }; // Implicitly typed array
+
+// Defining a list 
+List<int> collectionTypeInt1 = new List<int>();
+List<int> collectionTypeInt2 = new List<int>() { 10, 20, 30, 40 };
