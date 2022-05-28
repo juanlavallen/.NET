@@ -62,3 +62,5 @@ string[] arrayString3 = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }; // 
 // Defining a list 
 List<int> collectionTypeInt1 = new List<int>();
 List<int> collectionTypeInt2 = new List<int>() { 10, 20, 30, 40 };
+
+collectionTypeInt1.Add(50); // Adding an element to the list
