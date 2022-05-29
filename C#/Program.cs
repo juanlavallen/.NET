@@ -71,3 +71,8 @@ collectionTypeInt2.Remove(10); // Removing an element from a list
 foreach (int item in collectionTypeInt2) {
     Console.WriteLine(item);
 }
+
+string[] users = new string[5] { "juandev_07", "pepe02", "strider_88", "rabbit", "_brian1_" };
+for (int i = 0; i < users.Length; i++) {
+    Console.WriteLine($"Index: {i} - Value: {users[i]}"); 
+}
