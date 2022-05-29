@@ -76,3 +76,9 @@ string[] users = new string[5] { "juandev_07", "pepe02", "strider_88", "rabbit",
 for (int i = 0; i < users.Length; i++) {
     Console.WriteLine($"Index: {i} - Value: {users[i]}"); 
 }
+
+int j = 0;
+do {
+    Console.WriteLine(j);
+    j++;
+} while (4 > j);
