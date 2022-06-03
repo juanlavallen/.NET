@@ -17,6 +17,19 @@ builder.Services.AddScoped<IPlaceRepository, PlaceRepository>();
 
 var app = builder.Build();
 
+using(var scope = app.Services.CreateScope()) {
+    var services = scope.ServiceProvider;
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+    
+    try {
+        var context = services.GetRequiredService<ContextDb>();
+        await context.Database.MigrateAsync();
+    } catch (System.Exception exeption) {
+        var logger = loggerFactory.CreateLogger<Program>();
+        logger.LogError(exeption, "An error occurred while running the migration");
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()) {
     app.UseSwagger();
