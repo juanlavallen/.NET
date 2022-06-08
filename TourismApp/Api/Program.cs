@@ -24,6 +24,7 @@ using(var scope = app.Services.CreateScope()) {
     try {
         var context = services.GetRequiredService<ContextDb>();
         await context.Database.MigrateAsync();
+        await DatabaseSeed.SeedAsync(context, loggerFactory);
     } catch (System.Exception exeption) {
         var logger = loggerFactory.CreateLogger<Program>();
         logger.LogError(exeption, "An error occurred while running the migration");
