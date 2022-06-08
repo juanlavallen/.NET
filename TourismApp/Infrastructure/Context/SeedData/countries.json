@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Name": "Estados Unidos",
+    "Status": true
+  },
+  {
+    "Id": 2,
+    "Name": "Colombia",
+    "Status": true
+  },
+  {
+    "Id": 3,
+    "Name": "Ecuador",
+    "Status": true
+  },
+  {
+    "Id": 4,
+    "Name": "Mexico",
+    "Status": true
+  },
+  {
+    "Id": 5,
+    "Name": "Peru",
+    "Status": true
+  },
+  {
+    "Id": 6,
+    "Name": "Argentina",
+    "Status": true
+  }
+]
