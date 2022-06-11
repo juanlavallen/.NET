@@ -15,9 +15,15 @@ namespace Api.Controllers {
         }
 
         [HttpGet("getAll")]
-        public async Task<ActionResult<List<Country>>> getAll() {
+        public async Task<ActionResult<List<Category>>> getAll() {
             var categories = await _categoryRepository.getAll();
             return Ok(categories);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Category>> getById(int id) {
+            var category = await _categoryRepository.getById(id);
+            return Ok(category);
         }
     }
 }
