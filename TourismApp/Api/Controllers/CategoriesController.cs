@@ -13,5 +13,11 @@ namespace Api.Controllers {
         public CategoriesController(IRepository<Category> categoryRepository){
             this._categoryRepository = categoryRepository;
         }
+
+        [HttpGet("getAll")]
+        public async Task<ActionResult<List<Country>>> getAll() {
+            var categories = await _categoryRepository.getAll();
+            return Ok(categories);
+        }
     }
 }
