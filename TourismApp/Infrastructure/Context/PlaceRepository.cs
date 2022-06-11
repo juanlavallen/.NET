@@ -12,11 +12,17 @@ namespace Infrastructure.Context {
         }
 
         public async Task<Place> getById(int id) {
-            return await _db.Places.FindAsync(id);
+            return await _db.Places
+                .Include(c => c.Country)
+                .Include(c => c.Category)
+                .FirstOrDefaultAsync(l => l.Id == id);
         }
 
         public async Task<IReadOnlyList<Place>> getAll() {
-            return await _db.Places.ToListAsync();
+            return await _db.Places
+                .Include(c => c.Country)
+                .Include(c => c.Category)
+                .ToListAsync();
         }
     }
 }
