@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class PlacesController : Controller {
 
-        private readonly IPlaceRepository _placeRepository;
+        private readonly IRepository<Place> _placeRepository;
         
-        public PlacesController(IPlaceRepository placeRepository) {
+        public PlacesController(IRepository<Place> placeRepository ) {
             this._placeRepository = placeRepository;
         }
 
