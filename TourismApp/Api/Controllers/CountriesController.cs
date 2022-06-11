@@ -13,5 +13,11 @@ namespace Api.Controllers {
         public CountriesController(IRepository<Country> countryRepository) {
             this._countryRepository = countryRepository;
         }
+        
+        [HttpGet("getAll")]
+        public async Task<ActionResult<List<Place>>> getAll() {
+            var countries = await _countryRepository.getAll();
+            return Ok(countries);
+        }
     }
 }
