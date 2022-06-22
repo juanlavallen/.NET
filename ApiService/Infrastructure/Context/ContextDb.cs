@@ -7,6 +7,7 @@ namespace Infrastructure.Context
     {
         public ContextDb(DbContextOptions options) : base(options) { }
 
+        DbSet<Product> Products { get; set; }
         DbSet<User> Users { get; set; }
     }
 }
