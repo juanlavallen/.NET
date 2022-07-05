@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Core.Models {
-    public class Category {
+namespace Core.Models
+{
+    public class Category
+    {
         [Key]
         public int Id { get; set; }
 
