@@ -39,5 +39,38 @@ namespace LinqSnippets
                 .Where(num => num != 9) // => [ all but the 9 ]
                 .OrderBy(num => num); // => at the end, we order ascending
         }
+
+        static public void Search()
+        {
+            List<string> textList = new List<string>
+            {
+                "a",
+                "bx",
+                "c",
+                "d",
+                "e",
+                "cj",
+                "g"
+            };
+
+            // First of all elements
+            var first = textList.First();
+
+            // First element that is "C"
+            var firstC = textList.First(text => text.Equals("c"));
+
+            // First element that contains "J"
+            var firstJ = textList.First(text => text.Contains("j"));
+
+            // First element that contains "Z" or default value
+            var firstOrDefault = textList.FirstOrDefault(text => text.Contains("z"));
+
+            // Last element that contains "Z" or default value
+            var LastOrDefault = textList.LastOrDefault(text => text.Contains("z"));
+
+            // Single values
+            var uniqueElement = textList.Single();
+            var uniqueElementOrDefault = textList.SingleOrDefault();
+        }
     }
 }
