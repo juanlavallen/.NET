@@ -72,5 +72,12 @@ namespace LinqSnippets
             var uniqueElement = textList.Single();
             var uniqueElementOrDefault = textList.SingleOrDefault();
         }
+
+        // Paging with Skip & Take
+        public IEnumerable<T> GetPage<T>(IEnumerable<T> collection, int pageNumber, int resultsPage)
+        {
+            int index = (pageNumber - 1) * resultsPage;
+            return collection.Skip(index).Take(resultsPage);
+        }
     }
 }
