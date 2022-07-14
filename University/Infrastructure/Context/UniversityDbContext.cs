@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Core.Models;
 
 namespace Infrastructure.Context
 {
@@ -7,5 +8,6 @@ namespace Infrastructure.Context
         public UniversityDbContext(DbContextOptions<UniversityDbContext> options) : base(options) { }
 
         // TODO: Add DbSets (Tables of our database)
+        public DbSet<User> Users { get; set; }
     }
 }
