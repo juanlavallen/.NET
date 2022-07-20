@@ -82,3 +82,7 @@ do {
     Console.WriteLine(j);
     j++;
 } while (4 > j);
+
+/** Call to Class **/
+Loops instanceLoops = new Loops(users);
+instanceLoops.For();
