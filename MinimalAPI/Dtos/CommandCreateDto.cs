@@ -9,7 +9,7 @@ namespace MinimalAPI.Dtos
 
         [Required]
         [MaxLength(5)]
-        public string Plataform { get; set; }
+        public string Platform { get; set; }
 
         [Required]
         public string CommandLine { get; set; }

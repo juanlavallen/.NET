@@ -6,7 +6,7 @@ namespace MinimalAPI.Dtos
 
         public string HowTo { get; set; }
 
-        public string Plataform { get; set; }
+        public string Platform { get; set; }
 
         public string CommandLine { get; set; }
     }
