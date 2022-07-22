@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using MinimalAPI.Models;
 using MinimalAPI.Data;
 using MinimalAPI.Dtos;
 
@@ -36,6 +37,16 @@ app.MapGet("api/commands/{id}", async (ICommandRepo repo, IMapper mapper, int id
         return Results.Ok(mapper.Map<CommandReadDto>(command));
     }
     return Results.NotFound();
+});
+
+app.MapPost("api/commands", async (ICommandRepo repo, IMapper mapper, CommandCreateDto command) => {
+    var commandModel = mapper.Map<Command>(command);
+    await repo.CreateCommand(commandModel);
+    await repo.SaveChanges();
+
+    var commandReadDto = mapper.Map<CommandReadDto>(commandModel);
+
+    return Results.Created($"api/commands{commandReadDto.Id}", commandReadDto);
 });
 
 app.Run();
