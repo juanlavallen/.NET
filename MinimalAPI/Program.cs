@@ -24,6 +24,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("api/commands", async (ICommandRepo repo, IMapper mapper) => {
+    var commands = await repo.GetAllCommands();
+    return Results.Ok(mapper.Map<IEnumerable<CommandReadDto>>(commands));
+});
+
 app.MapGet("api/commands/{id}", async (ICommandRepo repo, IMapper mapper, int id) => {
     var command = await repo.GetCommandById(id);
     if (command != null)
